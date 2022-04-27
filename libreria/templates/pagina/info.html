@@ -1,0 +1,38 @@
+{% extends 'mainlayout.html' %}
+
+{% block titulo %} formulario de informacion {% endblock %}
+
+{% block contenido %}
+<br><br><br>
+
+      <div class="container" align="center">
+        <h1> FORMULARIO DE CONTACTO</h1>
+          <div class="row">
+            <div class="col"></div>
+
+            <div class="col">
+                <form class="form-control" action="/enviar" method="POST">
+                    {% csrf_token %}
+                
+                    <div  class="mb-3">
+                        <label for="" class="form-label"></label>
+                        <input  type="text" class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="Nombre">
+                        <small id="helpId" class="form-text text-muted">Ingresa el Nombre</small>
+                      </div>
+        
+                    <div class="mb-3">
+                      <label for="" class="form-label"></label>
+                      <input type="text" class="form-control" name="edad" id="edad" aria-describedby="helpId" placeholder="Edad">
+                      <small id="helpId" class="form-text text-muted">Ingresa tu Edad</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                
+                </form>
+
+            </div>
+            <div class="col"></div>
+
+
+          </div>
+      </div>
+{% endblock %}

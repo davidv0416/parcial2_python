@@ -1,0 +1,13 @@
+{% extends 'mainlayout.html' %}
+
+{% block titulo %} Editar un animal {% endblock %}
+
+{% block contenido %}
+
+<br><br>
+<div class="card text-center">
+    <h4 class="card-title">Editar Animal</h4>
+    <p class="card-text">{% include 'animales/forms.html'%}</p>
+</div>
+
+{% endblock %}

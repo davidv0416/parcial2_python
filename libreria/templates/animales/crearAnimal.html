@@ -1,0 +1,14 @@
+{% extends 'mainlayout.html' %}
+
+{% block titulo %} Agregar un nuevo animal {% endblock %}
+
+{% block contenido %}
+
+<br><br>
+<div class="card text-center">
+    <h4 class="card-title">Crear nuevo contacto</h4>
+    <p class="card-text">{% include 'animales/forms.html'%}</p>
+</div>
+
+
+{% endblock %}

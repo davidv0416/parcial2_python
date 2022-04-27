@@ -1,0 +1,43 @@
+{% extends 'mainlayout.html' %}
+
+{% block titulo %} ANIMALES {% endblock %}
+
+{% block contenido %}
+<br>
+<div>
+    <a class="btn btn-success" href="{% url 'crearAnimal' %}">Agregar nuevo Animal</a>
+</div>
+<table  class="table table-hover">
+    <br>
+    <tr align="center">
+        <td>ID</td>
+        <td>NOMBRE</td>
+        <td>EDAD</td>
+        <td>GENERO</td>
+        <td>TELEFONO</td>
+        <td>VACUNA</td>
+        <td>OPCIONES</td>
+    </tr>
+
+    {% for animal in animales %}
+    <tr align="center" class="strong" >
+        <td>{{animal.id}}</td>
+        <td>{{animal.nombre}}</td>
+        <td>{{animal.edad}}</td>
+        <td>{{animal.genero}}</td>
+        <td>{{animal.telefono}}</td>
+        <td>{{animal.vacuna}}</td>
+        <td align="center">
+            <div>
+                <a class="btn btn-primary" href="{% url 'editarAnimal' %}">Editar Animal</a>
+                <a class="btn btn-danger">Eliminar Contacto</a>
+            </div>
+         </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br><br>
+
+{% endblock %}
